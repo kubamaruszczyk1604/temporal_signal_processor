@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastQueue", "FastQueue.csproj", "{BCD7D8B0-49FD-44F5-8185-43EA6D7D737A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCD7D8B0-49FD-44F5-8185-43EA6D7D737A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD7D8B0-49FD-44F5-8185-43EA6D7D737A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD7D8B0-49FD-44F5-8185-43EA6D7D737A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD7D8B0-49FD-44F5-8185-43EA6D7D737A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F7CB3AE-0912-49B8-9233-03BFD6CAD19C}
+	EndGlobalSection
+EndGlobal
