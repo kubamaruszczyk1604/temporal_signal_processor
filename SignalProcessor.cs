@@ -52,6 +52,11 @@ namespace FastQueue
         {
             Console.Write("Signal: ");
             m_SignalValuesQueue.Print();
+
+          
         }
+
+       
+
     }
 }
