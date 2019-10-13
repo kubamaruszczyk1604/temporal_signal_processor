@@ -28,8 +28,13 @@ namespace FastQueue
             }
 
 
-            //ShiftQueue<int> fastQ = new ShiftQueue<int>(9);
-            SignalProcessor processor = new SignalProcessor(new float[] { 0.8f, 0.1f, 0.1f,0.2f, 0.1f,3.4f, 0.8f, 0.1f, 0.1f, 0.2f, 0.1f, 3.4f });
+            float[] kern = KernelNormalizer.NormalizeKernel(new float[] { 0.382928f, 0.241732f, 0.060598f, 0.005977f, 0.000229f });
+            float sum = 0;
+            for (int i = 0; i < kern.Length; ++i)
+            {
+                sum += kern[i];
+            }
+            SignalProcessor processor = new SignalProcessor(kern);
 
             while (true)
             {
@@ -37,18 +42,20 @@ namespace FastQueue
                 Console.Clear();
                 processor.Put(float.Parse(s));
                 processor.PrintSignal();
-                Stopwatch sw = Stopwatch.StartNew();
-                for(int i = 0; i< 10000; ++i)
-                {
-                    processor.GetFilteredOutput();
+    
 
-                }
-                sw.Stop();
-                Console.WriteLine((sw.Elapsed.TotalSeconds/10000.0).ToString("N10"));
+                //Stopwatch sw = Stopwatch.StartNew();
+                //for(int i = 0; i< 10000; ++i)
+                //{
+                //    processor.GetFilteredOutput();
+
+                //}
+                //sw.Stop();
+                //Console.WriteLine((sw.Elapsed.TotalSeconds/10000.0).ToString("N10"));
 
 
-                //Console.WriteLine("Linear: " + processor.GetFilteredOutput().ToString());
-                // Console.WriteLine("Parallel: " + processor.GetFilteredOutput_Parallel().ToString());
+                Console.WriteLine("Linear: " + processor.GetFilteredOutput().ToString());
+               
                 //int n = GetNum(s);
                 //fastQ.Push(n);
                 //fastQ.Print();
