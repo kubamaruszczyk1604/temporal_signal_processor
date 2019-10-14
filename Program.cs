@@ -15,7 +15,7 @@ namespace FastQueue
              void PrintDraw(float n)
             {
                  int no = (int)(n * 10.0f);
-                 Console.WriteLine(new string('|', no));
+                 Console.WriteLine(new string('▒', no));
             }
 
 
