@@ -8,6 +8,7 @@ namespace FastQueue
     {
         private T[] m_Data;
         private int m_Ptr;  
+
         public ShiftQueue(int size)
         {
             if (size < 1) size = 1;
@@ -21,6 +22,7 @@ namespace FastQueue
             m_Ptr = (++m_Ptr) % m_Data.Length;
            
         }
+
         public T GetLast()
         {
             return m_Data[m_Ptr];

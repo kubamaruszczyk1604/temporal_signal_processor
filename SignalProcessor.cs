@@ -31,32 +31,29 @@ namespace FastQueue
             }
             return sum;
         }
-        object sync = new object();
-        public float GetFilteredOutput_Parallel()
-        {
-            float sum = 0;
-            
-            Parallel.For(0, m_Kernel.Length,
-                   i => {
-                       float mul = m_Kernel[i] * m_SignalValuesQueue.Get(i);
-                       lock (sync)
-                       {
-                           sum += mul;
-                       }
 
-                   });
-            return sum;
-        }
+        //object sync = new object();
+        //public float GetFilteredOutput_Parallel()
+        //{
+        //    float sum = 0;
+            
+        //    Parallel.For(0, m_Kernel.Length,
+        //           i => {
+        //               float mul = m_Kernel[i] * m_SignalValuesQueue.Get(i);
+        //               lock (sync)
+        //               {
+        //                   sum += mul;
+        //               }
+
+        //           });
+        //    return sum;
+        //}
 
         public void PrintSignal()
         {
             Console.Write("Signal: ");
-            m_SignalValuesQueue.Print();
-
-          
+            m_SignalValuesQueue.Print();        
         }
-
-       
 
     }
 }
